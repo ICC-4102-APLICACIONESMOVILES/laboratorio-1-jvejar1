@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 1) {  //is from login
             if(resultCode == Activity.RESULT_OK){
 
-                int duration = Toast.LENGTH_SHORT;
 
                 CredentialsManager credentials_manager = new CredentialsManager(context);
                 String user_name = credentials_manager.getUserName();
@@ -60,11 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    protected void displayGreeting(String user_name, String user_password){
-        TextView userNameTextView = (TextView) findViewById(R.id.userEditText);
-        userNameTextView.setText(user_name);
-        TextView userPasswordTextView = (TextView) findViewById(R.id.passwordEditText);
-        userPasswordTextView.setText(user_password);
+    public void displayGreeting(String user_name, String user_password){
+
 
 
     }
